@@ -27,3 +27,14 @@ This is a simple FastAPI project. Follow the steps below to setup and run the pr
     ```bash
     fastapi dev main.py
     ```
+
+4. **Test APIs**:
+
+Open in browser
+
+[http://localhost:8000](http://localhost:8000)
+
+[http://localhost:8000/items/438?q=somequery]
+
+**Interactive API docs**
+[http://localhost:8000/docs](http://localhost:8000/docs)
