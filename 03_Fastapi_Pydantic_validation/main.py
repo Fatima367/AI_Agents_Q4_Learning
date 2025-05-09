@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel, Field
 from datetime import datetime, UTC
-from uuid import uuid4
+from uuid import uuid4         # Generates a unique ID, useful for session tracking.
 
 # Initializing FastAPI app
 app = FastAPI(
@@ -41,7 +41,8 @@ async def chat(message: Message):
     if not message.text.strip():
         raise HTTPException(
             status_code = 400, detail= "Message cannot be empty"
-        )
+        )                   # manually raise HTTP error
+    
     reply_text = f"Hello, {message.user_id}! You said: {message.text}. How can I assist you today?"
     return Response(
         user_id= message.user_id,
