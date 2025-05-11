@@ -19,6 +19,7 @@ async def read_item(
 ):
     return {"item_id": item_id}
 
+
 @app.get("/items/")
 async def read_items(
     q: str | None = Query(
@@ -35,3 +36,19 @@ async def read_items(
     limit: int = Query(10, le=100) # Less than or equal to 100
 ):
     return {"q": q, "skip": skip, "limit": limit}
+
+
+@app.put("/items/validated/{item_id}")
+async def update_item(
+    item_id: int = Path(..., title= "Item ID", ge= 1),
+    q: str = Query(None, min_length= 3),
+    item: Item | None = Body(None, description= "Optional item data (JSON body)")
+):
+    result = {"item_id": item_id}
+
+    if q:
+        result.update({"q": q})
+    if item:
+        result.update({"item": item.model_dump()})
+
+    return result
