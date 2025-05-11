@@ -1,14 +1,17 @@
-from fastapi import FastAPI, Path
+from fastapi import FastAPI, Path, Query
 
 app = FastAPI()
 
 @app.get("/items/{item_id}")
 async def read_item(
-    item_id: int = Path(
-        ..., # means the parameter is required
-        title= "ID of the item",
-        description="A unique identifier for the item",
-        ge= 1 # means greater than or equal to one
-    )
+    q: str | None = Query(
+        None,  # Default value is None (optional parameter)
+        title= "Query string",
+        description="Query string for searching items",
+        min_length = 3,
+        max_length = 50
+        ),
+    skip: int = Query(0, ge=0), # Greater than or equal to zero,
+    limit: int = Query(10, le=100) # Less than or equal to 100
 ):
-    return {"item_id": item_id}
+    return {"q": q, "skip": skip, "limit": limit}
