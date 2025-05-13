@@ -24,4 +24,4 @@ def get_my_goal(response: Annotated[dict, Depends(get_goal)]):
 
 
 # 3. Dependency with Query Parameters
-# Check a Secret Key
+# Check a Secret Key 
