@@ -64,3 +64,8 @@ blogs = {
     "2": "Machine Learning Blog",
     "3": "Deep Learning Blog"
 }
+
+users = {
+    "8": "shanzay",
+    "9": "fatima"
+}
