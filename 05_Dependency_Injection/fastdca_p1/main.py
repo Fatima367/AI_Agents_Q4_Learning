@@ -39,3 +39,8 @@ def login_api(user: Annotated[dict, Depends(dep_login)]):
 
 
 # 4. Multiple Dependencies
+
+def depfunc1(num: int):
+    num = int(num)
+    num += 1
+    return num
