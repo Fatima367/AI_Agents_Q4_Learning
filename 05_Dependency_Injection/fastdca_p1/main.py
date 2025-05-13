@@ -44,3 +44,8 @@ def depfunc1(num: int):
     num = int(num)
     num += 1
     return num
+
+def depfunc2(num: int):
+    num = int(num)
+    num += 2
+    return num
