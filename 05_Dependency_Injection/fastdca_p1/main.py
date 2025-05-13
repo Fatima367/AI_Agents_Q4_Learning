@@ -79,3 +79,8 @@ class GetObjectOr404():
         if not obj:
             raise HTTPException(status_code = status.HTTP_404_NOT_FOUND, detail = f"Object ID {id} not found")
         
+blog_dependency = GetObjectOr404(blogs)
+
+@app.get("/blog/{id}")
+def get_blog(blog_name: Annotated[dict, Depends(blog_dependency)]):
+    return blog_name
