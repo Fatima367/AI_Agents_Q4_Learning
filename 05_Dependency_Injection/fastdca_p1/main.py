@@ -25,3 +25,10 @@ def get_my_goal(response: Annotated[dict, Depends(get_goal)]):
 
 # 3. Dependency with Query Parameters
 # Check a Secret Key
+
+# dependency function
+def dep_login(username: str = Query(None), password: str = Query(None)):
+    if username == "admin" and password == "admin":
+        return {"message": "Login Succesful!"}
+    else:
+        return {"message": "Login Failed"}
