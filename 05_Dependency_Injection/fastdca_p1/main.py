@@ -14,3 +14,10 @@ def simple_goal(response: Annotated[dict, Depends(get_simple_goal)]):
 
 # 2. Dependency with Parameter
 # We can even pass function parameters in Dep.
+
+def get_goal(username: str):
+    return {"goal": "We are building AI agents Workforce", "username": username}
+
+@app.get("/get-goal")
+def get_my_goal(response: Annotated[dict, Depends(get_goal)]):
+    return response
