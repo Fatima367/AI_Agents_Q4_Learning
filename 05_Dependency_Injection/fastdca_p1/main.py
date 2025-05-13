@@ -59,3 +59,8 @@ def get_main(num: int, num1: Annotated[dict, Depends(depfunc1)], num2: Annotated
 
 # 5. CLASSES
 
+blogs = {
+    "1": "Generative AI Blog",
+    "2": "Machine Learning Blog",
+    "3": "Deep Learning Blog"
+}
