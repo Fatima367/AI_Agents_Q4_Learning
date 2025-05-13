@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends, Query, HTTPException
 from typing import Annotated
 
-app = FastAPI()
+app: FastAPI = FastAPI()
 
 # 1. Hello Dependency
 
