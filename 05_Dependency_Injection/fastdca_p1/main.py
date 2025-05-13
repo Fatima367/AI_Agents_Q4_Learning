@@ -1,6 +1,13 @@
-def main():
-    print("Hello from fastdca-p1!")
+from fastapi import FastAPI, Depends
+from typing import Annotated
 
+app = FastAPI()
 
-if __name__ == "__main__":
-    main()
+# 1. Hello Dependency
+
+def get_simple_goal():
+    return {"goal": "We are building AI agents Workforce"}
+
+@app.get("/get-simple-goal")
+def simple_goal(response: Annotated[dict, Depends(get_simple_goal)]):
+    return response
