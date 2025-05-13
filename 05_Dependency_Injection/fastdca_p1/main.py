@@ -55,3 +55,7 @@ def depfunc2(num: int):
 def get_main(num: int, num1: Annotated[dict, Depends(depfunc1)], num2: Annotated[dict, Depends(depfunc2)]):
     total= num + num1 + num2
     return f"Total : {total}"
+
+
+# 5. CLASSES
+
