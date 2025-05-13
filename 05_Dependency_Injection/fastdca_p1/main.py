@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Depends, Query
+from fastapi import FastAPI, Depends, Query, HTTPException
 from typing import Annotated
 
 app = FastAPI()
@@ -69,3 +69,13 @@ users = {
     "8": "shanzay",
     "9": "fatima"
 }
+
+class GetObjectOr404():
+    def __init__(self, model)-> None:
+        self.model = model
+
+    def __call__(self, id: str):
+        obj = self.model.get(id)
+        if not obj:
+            raise HTTPException(status_code = status.HTTP_404_NOT_FOUND, detail = f"Object ID {id} not found")
+        
