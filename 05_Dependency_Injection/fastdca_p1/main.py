@@ -33,7 +33,7 @@ def dep_login(username: str = Query(None), password: str = Query(None)):
     else:
         return {"message": "Login Failed"}
     
-@app.get("/sigin")
+@app.get("/signin")
 def login_api(user: Annotated[dict, Depends(dep_login)]):
     return user
 
