@@ -36,3 +36,6 @@ def dep_login(username: str = Query(None), password: str = Query(None)):
 @app.get("/sigin")
 def login_api(user: Annotated[dict, Depends(dep_login)]):
     return user
+
+
+# 4. Multiple Dependencies
