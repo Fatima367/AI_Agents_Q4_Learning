@@ -11,3 +11,6 @@ def get_simple_goal():
 @app.get("/get-simple-goal")
 def simple_goal(response: Annotated[dict, Depends(get_simple_goal)]):
     return response
+
+# 2. Dependency with Parameter
+# We can even pass function parameters in Dep.
