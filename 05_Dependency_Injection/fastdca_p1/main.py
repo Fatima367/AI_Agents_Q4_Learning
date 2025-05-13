@@ -21,3 +21,7 @@ def get_goal(username: str):
 @app.get("/get-goal")
 def get_my_goal(response: Annotated[dict, Depends(get_goal)]):
     return response
+
+
+# 3. Dependency with Query Parameters
+# Check a Secret Key
