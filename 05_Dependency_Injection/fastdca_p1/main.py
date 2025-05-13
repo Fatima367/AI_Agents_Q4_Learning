@@ -84,3 +84,10 @@ blog_dependency = GetObjectOr404(blogs)
 @app.get("/blog/{id}")
 def get_blog(blog_name: Annotated[dict, Depends(blog_dependency)]):
     return blog_name
+
+
+user_dependency = GetObjectOr404(users)
+
+@app.get("/user/{id}")
+def get_user(user_name: Annotated[dict, Depends(user_dependency)]):
+    return user_name
