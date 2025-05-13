@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Depends, Query, HTTPException
-from typing import Annotated
+from typing import Annotated    # Tells FastAPI to treat the value as both a type and a dependency.
 
 app: FastAPI = FastAPI()
 
