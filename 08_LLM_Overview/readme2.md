@@ -2,7 +2,7 @@
 
 **LLM** stands for **Large Language Model**.
 
-It is a type of artificial intelligence (AI) program that is trained to understand and generate human-like text.  
+It is a type of **artificial intelligence (AI)** program that is trained to understand and generate human-like text.  
 
 Think of it like a very smart robot that has read millions of books, articles, websites, and more. It uses all that reading to help answer your questions, write things for you, or even chat with you — just like a person!
 
