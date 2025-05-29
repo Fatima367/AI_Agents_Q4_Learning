@@ -315,8 +315,8 @@ In an LLM:
    * Each neuron holds some **numbers and formulas** that help the model decide what word comes next.
 
 So:
-   🧠 Human brain neuron = real biological cell
-   🤖 LLM neuron = virtual math unit inside a program
+ 🧠 Human brain neuron = real biological cell
+ 🤖 LLM neuron = virtual math unit inside a program
 
 So the **neurons are software**, and they **live inside powerful hardware**.
 
@@ -477,7 +477,7 @@ No, it doesn’t:
 
 * **LLMs are not perfect:** They don’t truly understand meaning — they’re just really good at language patterns.
 * It only knows what it learned during training (and sometimes it guesses).
-* They can **make mistakes** or **give wrong/made-up answers**.. They can **hallucinate** (make up fake info).
+* They can **make mistakes** or **give wrong/made-up answers**. They can **hallucinate** (make up fake info).
 * **They don’t have feelings or beliefs.**
 * **They don’t know what’s happening right now** (real-time facts and information) unless connected to real-time data (web or internet) or updated regularly.
 
@@ -500,3 +500,20 @@ No, it doesn’t:
 * **A Transformer is** a powerful AI model used to understand and generate language
 * Transformer is used because it's better at handling complex, long texts and understanding context
 * Transformer is the brain of LLMs — it reads your input, understands it using attention, and generates a reply
+
+---
+
+## 🧠 Want to Learn More?
+
+You can explore open-source LLMs like:
+- [HuggingFace Transformers](https://huggingface.co/transformers/)
+- [Google Gemma](https://ai.google.dev/gemma)
+- [Meta LLaMA](https://ai.meta.com/llama/)
+
+---
+
+## 📄 License
+
+This guide is open-source and free to use for educational purposes.
+
+---
