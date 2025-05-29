@@ -306,7 +306,7 @@ They are mathematical parts of the model.
 In a human brain:
 
    * Neurons are tiny cells that send signals to each other.
-   * [cite: 62] They help us think, feel, and remember.
+   * They help us think, feel, and remember.
 
 In an LLM:
 
@@ -344,42 +344,49 @@ Think of it like the "engine" inside an LLM that helps it read, understand, and 
 
 **Transformers are the core engine** of most LLMs.
 
-[cite: 75] 💡Why Are They Called "Transformers"?
-The name comes from the model’s ability to transform input text (like your question) into output text (like an answer), using a smart mechanism called attention.
-[cite: 76] But don’t worry — we’ll explain what that means in simple terms below. 👇
-🚀Why Were Transformers Created?
-[cite: 77] Before Transformers, AI models had problems with:
+### 💡Why Are They Called "Transformers"?
+The name comes from the model’s ability to **transform input text** (like your question) into output text (like an answer), using a smart mechanism called **attention**. 
 
-* Remembering long sentences
-* Understanding the meaning of complex text
-* Processing large amounts of language quickly
+But don’t worry — I’ll explain what that means in simple terms below. 👇 
 
-Transformers were introduced in 2017 by researchers at Google, and they completely changed the game.
-[cite: 78] They made LLMs:
+### 🚀Why Were Transformers Created?
+Before Transformers, AI models had problems with:
 
-* Faster
-* More accurate
-* Better at understanding context
+   * Remembering long sentences
+   * Understanding the meaning of complex text
+   * Processing large amounts of language quickly
 
-🧠What Do Transformers Do?
-[cite: 79] (Simple Role Explanation)
+Transformers were introduced in **2017** by researchers at Google, and they completely changed the game. They made LLMs:
+
+   * **Faster**
+   * **More accurate**
+   * **Better at understanding context**
+
+### 🧠 What Do Transformers Do? (Simple Role Explanation)
 Here’s what a Transformer does in an LLM:
 
-1.  Reads the input text (your question)
-    For example:
+#### 1. Reads the input text (your question)
+For example:
     “Why is the sky blue?”
-2.  [cite: 80] Finds meaning and context
-    It doesn't just read word by word — it looks at all the words at once and figures out how they relate to each other.
-    [cite: 81] This is done using something called attention.
-3.  Figures out what’s important
-    In the sentence “The cat sat on the mat,” it pays attention to which words affect others (like "cat" and "sat").
-    [cite: 82] This allows it to understand:
-    * Who is doing the action
-    * What the main topic is
-    * What tone or style the sentence should have
-4.  Creates a smart response
-    It uses what it learned to predict the best next words and generate an answer.
-[cite: 83] 🔍What's "Attention"?
+
+#### 2. Finds meaning and context
+It doesn't just read word by word — it looks at **all the words at once** and figures out how they relate to each other.
+
+This is done using something called **attention**.
+
+#### 3. Figures out what’s important
+In the sentence “The cat sat on the mat,” it pays attention to **which words affect others** (like "cat" and "sat").
+
+This allows it to understand:
+
+   * Who is doing the action
+   * What the main topic is
+   * What tone or style the sentence should have
+
+#### 4. Creates a smart response
+It uses what it learned to **predict the best next words** and generate an answer.
+
+## 🔍What's "Attention"?
 This is a key part of Transformers.
 Attention means:
 👉The model focuses more on the important words in a sentence — kind of like how we pay attention to key points when we read or listen.
