@@ -315,8 +315,9 @@ In an LLM:
    * Each neuron holds some **numbers and formulas** that help the model decide what word comes next.
 
 So:
-🧠 Human brain neuron = real biological cell
-🤖 LLM neuron = virtual math unit inside a program
+
+- 🧠 Human brain neuron = real biological cell
+- 🤖 LLM neuron = virtual math unit inside a program
 
 So the **neurons are software**, and they **live inside powerful hardware**.
 
