@@ -448,17 +448,12 @@ No, it doesn’t:
 
 [cite: 107] 🎯In Summary
 
-**What is it?**
-A smart AI tool trained to understand and write human language
-
-**How it works**
-It learns from reading lots of text and finds word patterns
-
-**What it does**
-Answers questions, helps write, explains things, and more
-
-**Is it human?**
-[cite: 108] No, it’s just very good at mimicking language
+| | |
+| :--- | :--- |
+| What is it? | A smart AI tool trained to understand and write human language |
+| How it works | It learns from reading lots of text and finds word patterns |
+| What it does | Answers questions, helps write, explains things, and more |
+| Is it human? | No, it’s just very good at mimicking language |
 
 * LLMs exist in real life — they run on powerful computers in data centers.
 * [cite: 109] You talk to them using the internet, not by downloading them.
