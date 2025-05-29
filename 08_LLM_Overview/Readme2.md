@@ -388,46 +388,56 @@ It uses what it learned to **predict the best next words** and generate an answe
 
 ## 🔍What's "Attention"?
 This is a key part of Transformers.
-Attention means:
-👉The model focuses more on the important words in a sentence — kind of like how we pay attention to key points when we read or listen.
-[cite: 84] Example:
+**Attention** means:
+👉The model focuses more on the **important words** in a sentence — kind of like how we pay attention to key points when we read or listen.
+
+Example:
 In “The man saw a dog on the hill,”
+
 the model uses attention to figure out:
+
 Was the dog on the hill, or was the man?
-[cite: 85] Attention helps it understand context clearly.
 
-[cite: 86] 🏗️How Is a Transformer Built?
+Attention helps it **understand context clearly.**
+
+### 🏗️How Is a Transformer Built?
+
 You don’t need to know the full math, but here’s the simple idea:
-A Transformer model has:
+A **Transformer model** has:
 
-| Part | Role |
+| **Part** | **Role** |
 | :--- | :--- |
-| Encoder | Reads and understands the input |
-| Decoder | Writes or generates the response |
-| Attention Layers | Focus on important words and relationships |
-| Layers/Blocks | Stack of processing steps to improve understanding |
+| **Encoder** | Reads and understands the input |
+| **Decoder** | Writes or generates the response |
+| **Attention Layers** | Focus on important words and relationships |
+| **Layers/Blocks** | Stack of processing steps to improve understanding |
 
-Modern models (like GPT) often just use the decoder part, because they are focused on generating text.
-[cite: 87] 🧩Simple Analogy:
-Imagine a Transformer is like a super-smart translator in your phone.
-[cite: 88] You ask something, it quickly reads everything, figures out what you mean, and gives you the best answer — like a helpful assistant that never sleeps!
-[cite: 89] 📊This is like the “mind” of the AI — it’s not physical, but it runs on physical machines.
-[cite: 90] 🔐Can You Download an LLM?
+Modern models (like GPT) often just use the **decoder** part, because they are focused on **generating** text.
 
-* 🟢Small LLMs (like GPT-2 or TinyLlama) can run on laptops.
-* [cite: 91] 🔴Large LLMs (like GPT-4) are too big and expensive — they run in the cloud on massive machines.
+## 🧩Simple Analogy:
+Imagine a Transformer is like a **super-smart translator** in your phone.
+You ask something, it quickly reads everything, **figures out what you mean**, and gives you the best answer — like a helpful assistant that never sleeps!
 
-[cite: 92] 📷Visual Comparison (Imagine)
+📊This is like the “mind” of the AI — it’s not physical, but it runs on physical machines.
 
-| Thing | Size |
+
+# 🔐Can You Download an LLM?
+
+* 🟢**Small LLMs** (like GPT-2 or TinyLlama) can run on laptops.
+* 🔴**Large LLMs** (like GPT-4) are too big and expensive — they run in the cloud on massive machines.
+
+
+## 📷Visual Comparison (Imagine)
+
+| **Thing** | **Size** |
 | :--- | :--- |
 | LLM | Like a giant brain in a server room |
 | Your Phone | Like a small brain that asks the big brain for help |
 | The Cloud | The internet highway between you and the LLM |
 
-💻Where It All Runs: Physical + Virtual
+## 💻Where It All Runs: Physical + Virtual
 
-| Layer | What It Is | Example / Detail |
+| **Layer** | **What It Is** | **Example / Detail** |
 | :--- | :--- | :--- |
 | Physical | Hardware (GPUs, servers) | Data centers running the AI |
 | Virtual | Software (LLM model) | Neural network with parameters |
@@ -435,58 +445,58 @@ Imagine a Transformer is like a super-smart translator in your phone.
 | Inside Model | Neurons (math units) | Billions of parameters (learned data) |
 | Function | Prediction | Predicts next words using math patterns |
 
-🧩Simple Analogy
-Imagine an LLM is like a giant library with a robot librarian.
 
-* [cite: 93] The library building = data center (physical)
-* The robot’s brain = transformer model (virtual)
+## 🧩Simple Analogy
+
+Imagine an LLM is like a **giant library with a robot librarian**.
+
+* The **library building** = data center (physical)
+* The **robot’s brain** = transformer model (virtual)
 * You ask a question → the robot finds the best answer using everything it’s read.
 
-# 7. 🚧Limitations and Misconceptions
+# 🚧Limitations and Misconceptions
 
-[cite: 95] 🧩Is an LLM Like a Human Brain?
+### 🧩Is an LLM Like a Human Brain?
 Not exactly. An LLM:
 
-* Doesn’t understand meaning like humans do.
-* [cite: 96] Doesn’t have emotions, beliefs, or personal experiences.
+* Doesn’t **understand meaning** like humans do.
+* Doesn’t have emotions, beliefs, or personal experiences.
 * Doesn’t think or feel like a person.
-* [cite: 97] Only gives answers based on the data it was trained on.
-[cite: 98] It’s like a super-smart autocomplete — but way more powerful.
-[cite: 99] Because it’s very good at:
+* Only gives answers based on the data it was trained on.
+
+It’s like a super-smart autocomplete — but way more powerful. Because it’s very good at:
 
 * Predicting what words should come next in a sentence
 * Understanding the meaning of your question
 * Responding in a way that sounds natural
 
 It’s trained on huge amounts of text, so it can "talk" about many topics: science, history, code, math, everyday life, and more.
-[cite: 100] 🔒Does It Know Everything?
+
+## 🔒 Does It Know Everything?
 No, it doesn’t:
 
-* It may make mistakes or give wrong answers.
-* [cite: 101] It only knows what it learned during training (and sometimes it guesses).
-* [cite: 102] It doesn’t know real-time information (unless connected to the internet or updated regularly).
-[cite: 103] ⚠️Important Things to Know (Limitations)
+* **LLMs are not perfect:** They don’t truly understand meaning — they’re just really good at language patterns.
+* It only knows what it learned during training (and sometimes it guesses).
+* They can **make mistakes** or **give wrong/made-up answers**.. They can **hallucinate** (make up fake info).
+* **They don’t have feelings or beliefs.**
+* **They don’t know what’s happening right now** (real-time facts and information) unless connected to real-time data (web or internet) or updated regularly.
 
-* LLMs are not perfect: They don’t truly understand meaning — they’re just really good at language patterns.
-* [cite: 104] They can give wrong or made-up answers. They can hallucinate (make up fake info).
-* [cite: 105] They don’t have feelings or beliefs.
-* [cite: 106] They don’t know what’s happening right now (real-time facts) unless connected to real-time data or web.
 
-[cite: 107] 🎯In Summary
+# 🎯In Summary
 
 | | |
 | :--- | :--- |
-| What is it? | A smart AI tool trained to understand and write human language |
+| **What is it?** | **A smart AI tool trained to understand and write human language** |
 | How it works | It learns from reading lots of text and finds word patterns |
 | What it does | Answers questions, helps write, explains things, and more |
 | Is it human? | No, it’s just very good at mimicking language |
 
-* LLMs exist in real life — they run on powerful computers in data centers.
-* [cite: 109] You talk to them using the internet, not by downloading them.
-* [cite: 110] They are too big for normal computers, but smaller versions exist for local use.
-* [cite: 111] Neurons in LLMs are not tiny chips — they are virtual math units.
-* [cite: 112] They run inside powerful computer hardware (like GPUs).
-* The hardware is real; [cite: 113] the neurons are part of the AI’s code.
-* A Transformer is a powerful AI model used to understand and generate language
+* LLMs exist in real life — they run on **powerful computers in data centers.**
+* You talk to them using the internet, not by downloading them.
+* They are too big for normal computers, but **smaller versions** exist for local use.
+* Neurons in LLMs are **not tiny chips** — they are **virtual math units.**
+* They run inside **powerful computer hardware** (like GPUs).
+* The hardware is real; the neurons are **part of the AI’s code**.
+* **A Transformer is** a powerful AI model used to understand and generate language
 * Transformer is used because it's better at handling complex, long texts and understanding context
 * Transformer is the brain of LLMs — it reads your input, understands it using attention, and generates a reply
