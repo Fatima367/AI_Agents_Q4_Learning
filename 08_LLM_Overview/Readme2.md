@@ -140,8 +140,6 @@ But remember: it's not thinking - it's just using math and patterns to guess the
 
 ---
 
----
-
 ## 🔄 Simple Diagram (Text Version)
 ```
 You → [Input] → LLM → [Understands] → [Predicts Words] → [Output/Response]
@@ -256,7 +254,7 @@ These are good for learning or doing simple tasks.
 
 # 🧠 The Complete Picture of an LLM
 
-$\Physical + \Virtual \Existence \and \Workflow $
+Physical + Virtual Existence and Workflow
 
 ## 🧱 1. Parts Of LLM:
 
