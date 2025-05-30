@@ -5,6 +5,8 @@ from typing import Annotated
 import json
 import os
 
+USER_NOT_FOUND_MSG = "User not found"
+
 app = FastAPI()
 
 USERS_STORAGE_FILE = "users.json"
@@ -26,12 +28,12 @@ if os.path.exists(TASKS_STORAGE_FILE):
 
 def save_user_data():
     with open(USERS_STORAGE_FILE, "w") as file:
-        users_data = json.dump(users_data, file, indent=4)
+        json.dump(users_data, file, indent=4)
 
 
 def save_tasks():
     with open(TASKS_STORAGE_FILE, "w") as file:
-        tasks_data = json.dump(tasks, file, indent=4)
+        json.dump(tasks_data, file, indent=4)
 
 
 class UserCreate(BaseModel):
@@ -87,7 +89,7 @@ def get_users(user_id: int):
     user = users_data.get(user_id)
 
     if not user:
-        raise HTTPException(status_code= 404, detail= "User not found")
+        raise HTTPException(status_code= 404, detail= USER_NOT_FOUND_MSG)
     
     return UserRead(**user)
 
@@ -99,7 +101,7 @@ def create_task(task: Tasks):
         raise HTTPException(status_code=400, detail="Task already exists")
     
     if task.user_id not in users_data:
-        raise HTTPException(status_code=404, detail="User not found")
+        raise HTTPException(status_code=404, detail=USER_NOT_FOUND_MSG)
     
     tasks_data[task.task_id] = task.dict() 
 
@@ -139,10 +141,10 @@ def update_task_status(task_id: int, status: str):
     return task
 
 
-@app.get("/users/{user_id}/tasks", reponse_model= list(Tasks))
+@app.get("/users/{user_id}/tasks", response_model= list(Tasks))
 def get_user_tasks(user_id: int):
     
     if user_id not in users_data:
-        raise HTTPException(status_code=404, detail="User not found")
+        raise HTTPException(status_code=404, detail=USER_NOT_FOUND_MSG)
     
     return [Tasks(**t) for t in tasks_data.values() if t["user_id"] == user_id]
