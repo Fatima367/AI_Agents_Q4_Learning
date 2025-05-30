@@ -52,7 +52,7 @@ def depfunc2(num: int):
 
 
 @app.get("/main/{num}")
-def get_main(num: int, num1: Annotated[dict, Depends(depfunc1)], num2: Annotated[dict, Depends(depfunc2)]):
+def get_main(num: int, num1: Annotated[int, Depends(depfunc1)], num2: Annotated[int, Depends(depfunc2)]):
     total= num + num1 + num2
     return f"Total : {total}"
 
