@@ -1,6 +1,20 @@
-def main():
-    print("Hello from 10-crypto-agent!")
+from dotenv import load_dotenv
+from agents import Runner, Agent, AsyncOpenAI, OpenAIChatCompletionsModel
+import os
 
+load_dotenv()
 
-if __name__ == "__main__":
-    main()
+gemini_api_key = os.getenv("GEMINI_API_KEY")
+
+if not gemini_api_key:
+    raise KeyError("GEMINI_API_KEY not set")
+
+external_client = AsyncOpenAI(
+    api_key= gemini_api_key,
+    base_url= "https://generativelanguage.googleapis.com/v1beta/openai"
+)
+
+model = OpenAIChatCompletionsModel(
+    model= "gemini-2.0-flash",
+    openai_client= external_client
+)
