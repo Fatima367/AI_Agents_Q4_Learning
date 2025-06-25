@@ -1,6 +1,6 @@
-from dotenv import load_dotenv
-from agents import Runner, Agent, AsyncOpenAI, OpenAIChatCompletionsModel, ItemHelpers, function_tool
+from agents import Runner, Agent, AsyncOpenAI, OpenAIChatCompletionsModel, function_tool
 from openai.types.responses import ResponseTextDeltaEvent
+from dotenv import load_dotenv
 import chainlit as cl
 import requests
 import os
